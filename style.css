@@ -32,18 +32,24 @@ li {
 a {
     text-decoration: none;
     position: relative;
-    color: black;
+    /* color: black; */
     transition: all 300ms ease;
 }
 
 #landing {
     padding: 0px 50px;
 }
+button {
+    cursor: pointer;
+}
 /* 
 
 NAV
 
 */
+.logo__name {
+    color: #fff;
+}
 .nav__row {
     height: 100px;
     display: flex;
@@ -55,14 +61,14 @@ NAV
     margin: 0 auto;
 }
 
-.logo,
+.logo__wrapper,
 .nav__links {
     display: flex;
     align-items: center;
 }
 .nav__links {
     display: flex;
-    max-width: 430px;
+    max-width: 450px;
     width: 100%;
     justify-content: space-between;
     align-items: center;
@@ -93,7 +99,9 @@ NAV
     background-color: rgba(0, 0, 255, 0.651);
     border-color: rgba(0, 0, 255, 0.651);
 }
-
+.link__hover-effect {
+    color: black;
+}
 .link__hover-effect:after {
     content: "";
     position: absolute;
@@ -110,12 +118,84 @@ NAV
     left: 0;
 }
 
+/*
+NAV for movie page 
+*/
+.nav__link--white {
+    /* display: flex; */
+    /* padding-right: 60px; */
+    font-weight: 600;
+}
+
+.nav__link--white:last-child {
+    border: 0.2px solid #fff;
+    background-color: #fff;
+    letter-spacing: 0.5px;
+    border-radius: 64px;
+    padding: 9px 38px;
+    height: 48px;
+    transition: all 500ms ease;
+}
+
+.nav__contact--white {
+    font-size: 14px;
+    font-weight: 700;
+    color: #6030b1;
+}
+
+.link__white{
+    color: #fff;
+}
+.nav__link--white:last-child:hover {
+    background-color: rgb(243, 38, 100);
+    border-color: rgb(243, 38, 100);
+}
+.nav__link--white:last-child:hover .nav__contact--white{
+    color: #fff;
+}
+
+.link__white:after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    bottom: -3px;
+    right: 0;
+    background-color: #fff;
+    transition: all 300ms ease ;
+}
+
+.link__white:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+.progress__bar{
+    width: 0;
+    height: 6px;
+    background-color: #6030b1;
+    animation: bar 800ms infinite ;
+}
+@keyframes bar {
+    0% {
+        width: 20%;
+        transform:  translateX(-10%);
+    }
+    60% {
+        width: 70%;
+        transform: translateX(40%);
+    }
+    100% {
+        width: 20%;
+        transform:translateX(1500px);
+    }
+}
 /* 
 
-Header
+Header for index
 
 */
-header {
+.header__container {
     max-width: 800px;
     width: 100%;
     display: flex;
@@ -126,8 +206,6 @@ header {
     /* font-weight: 600; */
     /* padding: 0 50px; */
     margin: 0 auto;
-}
-.header__container {
     padding-top: 20px;
 }
 .header__title {
@@ -182,12 +260,13 @@ header {
     max-width: 150px;
     width: 100%;
     border-radius: 20px;
+    color: #fff;
     border: 0.2px solid #6030b1;
     background-color: #6030b1;
 }
 .fa-magnifying-glass {
     font-size: 36px;
-    color: white;
+    /* color: white; */
 }
 
 .home__img {
@@ -195,4 +274,68 @@ header {
     height: 100%;
     border-radius: 50px;
     max-height: 45vh;
+}
+
+/* 
+
+movies header 
+
+*/
+.movie__header--container {
+    width: 100%;
+    height: 35vh;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./assets/pexels-donaldtong94-109669.jpg);
+    background-size: 700px;
+    /* background-repeat: repeat-x; */
+    background-position: top;
+    /* background-color: rgba(29, 24, 24, 0.459); */
+}
+.header__search--wrapper {
+    margin: 0 auto;
+    max-width: 600px;
+}
+.movie__header--search {
+    width: 100%;
+    height: 60px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.movie__search--input {
+    width: 100%;
+    border-radius: 27px;
+    border: 2px solid rgb(229, 231, 235);
+    padding: 20px 192px 20px 32px;
+    color: rgb(36, 62, 99);
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: border-color 300ms;
+}
+.movie__search--btn {
+    z-index: 2;
+    margin: 8px;
+    height: calc(100% - 16px);
+    border-radius: 500px;
+    width: 60px;
+    border: none;
+    background-color: transparent;
+    color: #6030b1;
+    font-weight: 700;
+    font-size: 16px;
+    transition: all 300ms;
+}
+.movie__search--btn:hover {
+    color: rgb(243, 38, 100);
+}
+.movie__header--title {
+    color: #fff;
+    font-size: 45px;
+    letter-spacing: 3.7px;
+    margin-bottom: 40px;
+    text-align: center;
 }
