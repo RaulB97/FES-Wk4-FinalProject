@@ -9,6 +9,7 @@
       src="https://kit.fontawesome.com/430de18ab4.js"
       crossorigin="anonymous"
     ></script>
+    <script src="index.js"></script>
 </head>
 <body>
     <nav>
@@ -34,6 +35,7 @@
             type="text"
             class="header__search--input"
             placeholder="Search by Name, Genre or Keyword"
+            onchange="onSearchChange(event)"
             />
             <button class="header__search--btn"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>

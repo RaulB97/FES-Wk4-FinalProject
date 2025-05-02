@@ -9,6 +9,7 @@
       src="https://kit.fontawesome.com/430de18ab4.js"
       crossorigin="anonymous"
     ></script>
+    <script src="index.js"></script>
 </head>
 <body>
     <header class="movie__header--container">
@@ -26,17 +27,25 @@
             </ul>
         </nav>
         <div class="header__search--wrapper">
-            <div class="movie__header--title">Browse our cars</div>
+            <div class="movie__header--title">Browse our movies</div>
             <div class="movie__header--search">
                 <input
                 type="text"
                 class="movie__search--input"
                 placeholder="Search by Name, Genre or Keyword"
+                onchange="onSearchChange(event)"
                 />
                 <button class="movie__search--btn"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
         </div>
     </header>
-    <div class="progress__bar"></div>
+    <!-- <div class="progress__bar"></div> -->
+    <div id="movie__section">
+        <div class="movie__section--header">
+            <h2>Search results: </h2>
+            <div class="movie__list"></div>
+        </div>
+    </div>
+    <div class="movie-list"></div>
 </body>
 </html>
