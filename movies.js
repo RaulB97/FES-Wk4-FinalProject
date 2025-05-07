@@ -20,8 +20,13 @@ async function displayMovies(searchRequest) {
 
 function onSearchChange(event){
     // return console.log(event.target.value);
-    localStorage.setItem("id", event.target.value);
-    window.location.href = "./movies.html";
     return displayMovies(event.target.value);
 }
 
+function getItemID() { return localStorage.getItem("id");}
+
+function main() {
+    displayMovies(getItemID());
+}
+
+main();
