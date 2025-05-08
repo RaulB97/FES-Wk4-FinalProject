@@ -327,6 +327,11 @@ Header for index
     color: #fff;
     border: 0.2px solid #6030b1;
     background-color: #6030b1;
+    transition: all 300ms ease;
+}
+.header__search--btn:hover {
+    background-color: rgb(243, 38, 100);
+    border-color: rgb(243, 38, 100);
 }
 .fa-magnifying-glass {
     font-size: 36px;
