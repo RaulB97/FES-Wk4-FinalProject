@@ -25,6 +25,19 @@
                 <li class="nav__link--white"><a href="#" class="link__white">Browse Movies</a></li>
                 <li class="nav__link--white"><a href="#" class="nav__contact--white">CONTACT</a></li>
             </ul>
+            <button class="btn__menu" onclick="openMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="menu__backdrop">
+                <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <ul class="menu__links">
+                    <li class="menu__list"><a href="#" class="menu__link" onclick="closeMenu()">Home</a></li>
+                    <li class="menu__list"><a href="./movies.html" class="menu__link" onclick="closeMenu()">Browse Movies</a></li>
+                    <li class="menu__list"><a href="" class="menu__link" onclick="closeMenu()">Contact</a></li>
+                </ul>
+            </div>
         </nav>
         <div class="header__search--wrapper">
             <div class="movie__header--title">Browse our movies</div>

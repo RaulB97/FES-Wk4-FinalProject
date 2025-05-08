@@ -10,7 +10,7 @@ async function displayMovies(searchRequest) {
     // next thing is to create the innerHTML for how we will display the movies.
     userListEL.innerHTML = moviesData.Search.map((movie) => `
         <div class="movie">
-            <figure class="movie__poster--wrapper">
+            <figure>
                 <img src=${movie.Poster} class="movie__poster">
             </figure>
             <div class="movie__title">${movie.Title}</div>
@@ -30,3 +30,11 @@ function main() {
 }
 
 main();
+
+function openMenu() {
+    document.body.classList += " menu--open"
+}
+
+function closeMenu() {
+    document.body.classList.remove("menu--open")
+}
