@@ -3,7 +3,7 @@
 let sortValue = '';
 let moviesData = '';
 async function getMovies(searchRequest) {
-    const movies = await fetch(`http://www.omdbapi.com/?apikey=2e431c92&s=${searchRequest}`);
+    const movies = await fetch(`https://www.omdbapi.com/?apikey=2e431c92&s=${searchRequest}`);
     moviesData = await movies.json();
     // console.log(moviesData.Search);
     

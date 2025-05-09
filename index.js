@@ -2,7 +2,7 @@
 // OMDb API link: http://www.omdbapi.com/?i=tt3896198&apikey=2e431c92
 
 async function displayMovies(searchRequest) {
-    const movies = await fetch(`http://www.omdbapi.com/?apikey=2e431c92&s=${searchRequest}`);
+    const movies = await fetch(`https://www.omdbapi.com/?apikey=2e431c92&s=${searchRequest}`);
     const moviesData = await movies.json();
     // console.log(moviesData.Search);
     const userListEL = document.querySelector(".movie__list");
