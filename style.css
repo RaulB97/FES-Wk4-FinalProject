@@ -432,6 +432,8 @@ movie
 
 .movie__section--header {
     margin: 40px 0px 80px 0px;
+    display: flex;
+    justify-content: space-between;
 }
 .movie__list {
     display: flex;
