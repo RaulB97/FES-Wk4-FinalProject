@@ -9,7 +9,7 @@
       src="https://kit.fontawesome.com/430de18ab4.js"
       crossorigin="anonymous"
     ></script>
-    <script src="movies.js"></script>
+    <script src="movies.js" defer></script>
 </head>
 <body>
     <header class="movie__header--container">
@@ -52,14 +52,18 @@
             </div>
         </div>
     </header>
-    <div class="progress__bar"></div>
+    <!-- <div class="progress__bar"></div> -->
     <div id="movie__section">
         <div class="movie__section--header">
             <h2>Search results: </h2>
             <!--add in a filter for the movies-->
+            <select id="filter" onchange="getFilterMovies(event)">
+              <option value="">Sort</option>
+              <option value="LOW_TO_HIGH">Year, Low to High</option>
+              <option value="HIGH_TO_LOW">Year, High to Low</option>
+            </select>
         </div>
         <div class="movie__list"></div>
     </div>
-    <!-- <div class="movie-list"></div> -->
 </body>
 </html>
